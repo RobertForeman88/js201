@@ -13,7 +13,7 @@ function hello(name){
 // Otherwise it behaves the same as the "hello" function.
 
 function helloDefault(name){
-    if (typeof (name) === 'string' && name !== ''){
+    if (typeof (name) == 'string' && name !== ''){
         return 'Hello, ' + name + '!'
     }
     else {
