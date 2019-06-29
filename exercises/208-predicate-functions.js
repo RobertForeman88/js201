@@ -21,6 +21,19 @@
 // isVowel(99) --> false
 // isVowel({e: 'Elephant'}) --> false
 
+function isVowel(character) {
+    const vowel = ['a', 'e', 'i', 'o', 'u']
+
+    if (typeof (character) == 'string' ) {
+       if (vowel.indexOf(character) == -1)  {
+          return false
+       } else {
+        return true
+       }
+    } else {
+        return false
+    }
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

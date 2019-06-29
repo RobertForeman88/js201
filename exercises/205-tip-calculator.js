@@ -9,6 +9,18 @@
 // Examples:
 // tipAmount(100, 'good') --> 20
 // tipAmount(40, 'fair') --> 6
+function tipAmount(amount, level){
+    var levelType = {
+        good: 0.2,
+        fair: 0.15,
+        poor: 0.1,
+
+    }
+    return amount * (levelType[level])
+    
+}
+    
+
 
 
 
@@ -21,6 +33,12 @@
 // totalAmount(100, 'good') --> 120
 // totalAmount(40, 'fair') --> 46
 
+function totalAmount(amount, level){
+    return amount + tipAmount(amount, level)
+
+
+
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -31,3 +49,8 @@
 // Examples:
 // splitAmount(100, 'good', 5) --> 24
 // splitAmount(40, 'fair', 2) --> 23
+
+function splitAmount(amount, level, people){
+    return  totalAmount(amount, level) / people
+
+}
