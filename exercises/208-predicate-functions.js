@@ -22,8 +22,8 @@
 // isVowel({e: 'Elephant'}) --> false
 
 function isVowel(character) {
-    const vowel = ['a', 'e', 'i', 'o', 'u']
-
+    const vowel = ['a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U']
+    
     if (typeof (character) == 'string' ) {
        if (vowel.indexOf(character) == -1)  {
           return false
@@ -35,6 +35,32 @@ function isVowel(character) {
     }
 }
 
+// shoter method for isVowel:
+
+// funtion isVowel(char){
+//        if (typeof char !== 'string') return false
+//        if (char.length !== 1 ) return false
+//        return 'aeiou'.indexof (char.toLowerCase()) !==1
+
+
+// Even shorther method:
+
+// funtion isVowel(char){
+//      return typeof char === 'string' &&
+//      char.length === 1 &&
+//      'aeiou'.indexof(char.toLowerCase()) 
+// }
+
+function isEven(n) {
+    return typeof n === 'number' &&
+     n % 2 === 0
+
+}
+
+
+ // funtion isOdd(n)
+ //     return typeof n === 'number' &&
+ //     (n % 2 === 1 || n % 2 === -1)
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write two functions: "isEven" and "isOdd" that take a number argument and
@@ -52,6 +78,15 @@ function isVowel(character) {
 
 
 
+  function isOdd(n){
+      return typeof n === 'number' &&
+     (n % 2 === 1 || n % 2 === -1)
+
+  }
+
+
+
+
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "isCapitalCity" that takes two arguments: a US state and a city name
 // and returns true or false if the city name is the capital of the state.
@@ -66,3 +101,74 @@ function isVowel(character) {
 // isCapitalCity('Texas', 'Houston') --> false
 // isCapitalCity('Alaska', 'Juneau') --> true
 // isCapitalCity('Strawberry', 'Mango') --> false
+
+
+function isCapitalCity(state, cities){
+    const capital = {
+        Alabama: 'Montgomery',
+        Montana: 'Helena',
+        Alaska:    'Juneau',    
+        Nebraska: 'Lincoln',
+        Arizona: 'Phoenix',    
+        Nevada:    'Carson City',
+        Arkansas: 'Little Rock',    
+        'New Hampshire': 'Concord',
+        California:    'Sacramento',    
+        'New Jersey': 'Trenton',
+        Colorado: 'Denver',    
+        'New Mexico': 'Santa Fe',
+        Connecticut: 'Hartford',    
+        'New York': 'Albany',
+        Delaware: 'Dover',    
+        'North Carolina': 'Raleigh',
+        Florida: 'Tallahassee',    
+        'North Dakota': 'Bismarck',
+        Georgia: 'Atlanta',    
+        Ohio: 'Columbus',
+        Hawaii:    'Honolulu',    
+        Oklahoma: 'Oklahoma City',
+        Idaho: 'Boise',    
+        Oregon:    'Salem',
+        Illinois: 'Springfield',    
+        Pennsylvania: 'Harrisburg',
+        Indiana: 'Indianapolis',    
+        'Rhode Island': 'Providence',
+        Iowa: 'Des Moines',    
+        'South Carolina': 'Columbia',
+        Kansas:    'Topeka',    
+        'South Dakota': 'Pierre',
+        Kentucky: 'Frankfort',    
+        Tennessee: 'Nashville',
+        Louisiana: 'Baton Rouge',
+        Texas: 'Austin',
+        Maine: 'Augusta',
+        Utah: 'Salt Lake City',
+        Maryland: 'Annapolis',    
+        Vermont: 'Montpelier',
+        Massachusetts: 'Boston',    
+        Virginia: 'Richmond',
+        Michigan: 'Lansing',    
+        Washington:    'Olympia',
+        Minnesota:    'St. Paul',    
+        'West Virginia': 'Charleston',
+        Mississippi: 'Jackson',    
+        Wisconsin: 'Madison',
+        Missouri: 'Jefferson City',    
+        Wyoming: 'Cheyenne'
+
+        }
+        return capital[state] === cities
+
+
+    }
+
+    
+        
+
+        
+    
+    
+
+
+
+
