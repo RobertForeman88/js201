@@ -8,8 +8,11 @@
 // Example:
 // reverse("skoob") --> "books"
 
-function reverse(){
-
+function reverse(str) {
+    var splitString = str.split('')
+    var reverseArray = splitString.reverse()
+    var joinArray = reverseArray.join('')
+        return joinArray
 
 }
 
@@ -21,10 +24,18 @@ function reverse(){
 // Example:
 // findLongestWord('a book full of dogs') --> 'book'
 
-function findLongestWord(){
-
-
+function findLongestWord(str){
+    var str = str.split(' ')
+    var longest = 0
+    var word = null
+    for (var i = 0; i < str.length ; i++)
+        if (longest < str[i].length){
+            longest = str[i].length
+            word = str[i]
+        }
+        return word
 }
+
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function called "nicer"
@@ -35,10 +46,22 @@ function findLongestWord(){
 // nicer('mom get the heck in here and bring me a darn sandwich.')
 // > 'mom get the in here and bring me a sandwich.'
 
-function nicer(){
+function nicer(sentence){
+    var myBadWords = ['darn', 'heck', 'dang', 'crappy']
+    var newSentence = []
+    var splitSentence = sentence.split(' ')
+    for (var i = 0; i < splitSentence.length; i++){
+      if (myBadWords.includes(splitSentence[i]) != true) {
+        newSentence.push(splitSentence[i])
+      }
+        
+    }
 
+return newSentence.join(' ')
 
 }
+
+
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function called "capitalizeAll"
