@@ -72,10 +72,12 @@ return newSentence.join(' ')
 // capitalizeAll('hello world') --> 'Hello World'
 // capitalizeAll('every day is like sunday') --> 'Every Day Is Like Sunday'
 
-function caitalizeAll(){
-
-
+function capitalizeAll(str){
+    return str.toLowerCase().split(' ').map(function(word) {
+        return (word.charAt(0).toUpperCase() + word.slice(1))
+    }).join(' ')
 }
+
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function called "split" that does the same thing as String.split
@@ -88,7 +90,27 @@ function caitalizeAll(){
 // split('APPLExxBANANAxxCHERRY', 'xx') --> ['APPLE', 'BANANA', 'CHERRY']
 // split('xyz', 'r') --> ['xyz']
 
-function split(){
+function split(str, delimiter, removeEmptyItems) {
+    if (!delimiter || delimiter.length === 0) return [str];
+    if (!str || str.length === 0) return [];
+    var result = [];
+    var j = 0;
+    var lastStart = 0;
+    for (var i=0;i<=str.length;) {
+      if (i == str.length || str.substr(i,delimiter.length) == delimiter)
+      {
+        if (!removeEmptyItems || lastStart != i)
+        {
+            result[j++] = str.substr(lastStart, i-lastStart);
+        }
+        lastStart = i+delimiter.length;
+        i += delimiter.length;    
+      } else i++;
+    }
+    return result;
+  }
 
-    
-}
+// ways:
+//  looping (for) through and using charAt
+//  regular expression (RegEx) to find and replace
+//  while loop with index of delimiter on the string
