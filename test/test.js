@@ -1053,7 +1053,7 @@ if (allSyntaxValid) {
   describe('Fizzbuzz', checkFizzbuzz)
   //describe('Rock Paper Scissors', checkRockPaperScissors)
   //describe('Number Joiners', checkNumberJoiners)
-  describe('Loopy Strings', checkLoopyStrings)
+  //describe('Loopy Strings', checkLoopyStrings)
   describe('Number Arrays', checkNumberArrays)
   describe('Factors', checkFactors)
   describe('Cities', checkCities)

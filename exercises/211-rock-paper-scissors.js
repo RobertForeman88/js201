@@ -7,7 +7,7 @@
 // rockPaperScissors('rock', 'paper') --> 'player 2'
 // rockPaperScissors('paper', 'paper') --> 'draw'
 
-function rockPaperScissors(){
-    
-    
-}
+
+
+//   rock > scissors  sicssors > papper  rock < paper
+//      3  > 2          2 > 1              3 > 1   

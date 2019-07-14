@@ -1,6 +1,17 @@
 // Write a function "max" that takes an array of numbers returns the highest
 // number in the array.
 
+// works for all but 0 with out 'if' statment
+// rearranged to accending then popped the last index value
+function max(ary){
+    var numbers = [];
+    if (ary.length === 0){
+    return 0}
+    else { 
+        ary.sort(function(a, b){return a - b})
+}
+    return ary.pop();
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -8,6 +19,19 @@
 // the sum of the numbers.
 // Example:
 // sumNumbers([1, 4, 8]) --> 13
+
+// declare a variable = 0
+// then create a loop to cycle through each number 
+// now add them 
+
+function sumNumbers(num){
+    var total = 0
+    for (var i = 0; i < num.length; i++){
+        total += num[i]
+
+    }
+    return total
+}
 
 
 
@@ -19,7 +43,22 @@
 // positives([1, 2, 3]) --> [1, 2, 3]
 // positives([-1, -2, -3]) --> []
 
+// create empty array to push into
+// creat a loop to cycle the array
+// use if to give it conditions
+// push into new array
+// watch where the return goes
 
+function positives (num){
+    var newArray = []
+    for (var i = 0; i < num.length; i++){
+        if (num[i] > 0) {
+            newArray.push(num[i])
+        }
+       
+    }
+    return newArray
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -28,6 +67,19 @@
 // Hint: you may want to re-use your "isEven" function from 01-predicate-functions.js
 
 
+// create an empty array to push even numbers into
+// create loop to cycle through array
+// (n % 2 === 0) <--- how you find even numbers
+
+function evens(num){
+    var numArray = []
+    for (var i = 0; i < num.length; i++){
+        if (num[i] % 2 === 0){
+            numArray.push(num[i])
+        }
+    }
+    return numArray
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "odds" which takes an array of numbers and returns a new
@@ -35,6 +87,19 @@
 // Hint: you may want to re-use your "isOdd" function from 01-predicate-functions.js
 
 
+// create an empty array to push even numbers into
+// create loop to cycle through array
+// (num[i] % 2 === 1 || num[i] % 2 === -1) <--- how you find odds numbers
+
+function odds(num){
+    var numArray = []
+    for (var i = 0; i < num.length; i++){
+        if (num[i] % 2 === 1 || num[i] % 2 === -1){
+            numArray.push(num[i])
+        }
+    }
+    return numArray
+}
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 // Write a function "integers" which takes an array of numbers and returns a new
@@ -44,6 +109,15 @@
 // Example:
 // integers([3.14, 2.4, 7, 8.1, 2]) --> [7, 2]
 
+function integers(num){
+    var newInt = []
+    for (var i = 0; i < num.length; i++){
+        if (num[i] % 2 === 0 || num[i] % 2 === 1 || num[i] % 2 === -1){
+            newInt.push(num[i])
+        }
+    }
+    return newInt
+}
 
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
