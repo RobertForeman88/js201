@@ -5,9 +5,14 @@
 // numberJoinerWhile(1, 10) --> '1_2_3_4_5_6_7_8_9_10'
 // numberJoinerWhile(12, 14) --> '12_13_14'
 
-function numberJoinerWhile(){
+function numberJoinerWhile(a, b){
+    var newNum = ''
+    var i = a
+    while (i <= b){
+        newNum += '_' + i; i++;
+    }
 
-
+    
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

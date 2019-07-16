@@ -126,3 +126,11 @@ function integers(num){
 //
 // Example:
 // squareDance([1, 2, 3]) --> [1, 4, 9]
+function squareDance(num){
+    var newAry = []
+    for (var i = 0; i < num.length; i++){
+            newAry.push(num[i] * num[i])
+        
+    }
+    return newAry
+}
